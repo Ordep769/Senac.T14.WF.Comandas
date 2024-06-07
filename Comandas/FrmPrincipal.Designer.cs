@@ -29,76 +29,53 @@
         private void InitializeComponent()
         {
             gpxPrincipal = new GroupBox();
-            btnCardapio = new ReaLTaiizor.Controls.MetroButton();
-            btnComanda = new ReaLTaiizor.Controls.MetroButton();
+            btnUsuarios = new ReaLTaiizor.Controls.MetroButton();
             btnPedidoCozinha = new ReaLTaiizor.Controls.MetroButton();
-            btnUsuario = new ReaLTaiizor.Controls.MetroButton();
+            btnComanda = new ReaLTaiizor.Controls.MetroButton();
+            btnCardapio = new ReaLTaiizor.Controls.MetroButton();
             gpxPrincipal.SuspendLayout();
             SuspendLayout();
             // 
             // gpxPrincipal
             // 
-            gpxPrincipal.Controls.Add(btnUsuario);
+            gpxPrincipal.BackColor = Color.FromArgb(32, 41, 50);
+            gpxPrincipal.Controls.Add(btnUsuarios);
             gpxPrincipal.Controls.Add(btnPedidoCozinha);
             gpxPrincipal.Controls.Add(btnComanda);
             gpxPrincipal.Controls.Add(btnCardapio);
-            gpxPrincipal.Location = new Point(41, 39);
+            gpxPrincipal.Location = new Point(23, 27);
+            gpxPrincipal.MinimumSize = new Size(126, 50);
             gpxPrincipal.Name = "gpxPrincipal";
             gpxPrincipal.Size = new Size(834, 376);
             gpxPrincipal.TabIndex = 0;
             gpxPrincipal.TabStop = false;
             // 
-            // btnCardapio
+            // btnUsuarios
             // 
-            btnCardapio.DisabledBackColor = Color.FromArgb(120, 65, 177, 225);
-            btnCardapio.DisabledBorderColor = Color.FromArgb(120, 65, 177, 225);
-            btnCardapio.DisabledForeColor = Color.Gray;
-            btnCardapio.Font = new Font("Microsoft Sans Serif", 10F);
-            btnCardapio.HoverBorderColor = Color.FromArgb(95, 207, 255);
-            btnCardapio.HoverColor = Color.FromArgb(95, 207, 255);
-            btnCardapio.HoverTextColor = Color.White;
-            btnCardapio.IsDerivedStyle = true;
-            btnCardapio.Location = new Point(6, 152);
-            btnCardapio.Name = "btnCardapio";
-            btnCardapio.NormalBorderColor = Color.FromArgb(65, 177, 225);
-            btnCardapio.NormalColor = Color.FromArgb(65, 177, 225);
-            btnCardapio.NormalTextColor = Color.White;
-            btnCardapio.PressBorderColor = Color.FromArgb(35, 147, 195);
-            btnCardapio.PressColor = Color.FromArgb(35, 147, 195);
-            btnCardapio.PressTextColor = Color.White;
-            btnCardapio.Size = new Size(180, 141);
-            btnCardapio.Style = ReaLTaiizor.Enum.Metro.Style.Light;
-            btnCardapio.StyleManager = null;
-            btnCardapio.TabIndex = 0;
-            btnCardapio.Text = "Cardapio";
-            btnCardapio.ThemeAuthor = "Taiizor";
-            btnCardapio.ThemeName = "MetroLight";
-            // 
-            // btnComanda
-            // 
-            btnComanda.DisabledBackColor = Color.FromArgb(120, 65, 177, 225);
-            btnComanda.DisabledBorderColor = Color.FromArgb(120, 65, 177, 225);
-            btnComanda.DisabledForeColor = Color.Gray;
-            btnComanda.Font = new Font("Microsoft Sans Serif", 10F);
-            btnComanda.HoverBorderColor = Color.FromArgb(95, 207, 255);
-            btnComanda.HoverColor = Color.FromArgb(95, 207, 255);
-            btnComanda.HoverTextColor = Color.White;
-            btnComanda.IsDerivedStyle = true;
-            btnComanda.Location = new Point(205, 152);
-            btnComanda.Name = "btnComanda";
-            btnComanda.NormalBorderColor = Color.FromArgb(65, 177, 225);
-            btnComanda.NormalColor = Color.FromArgb(65, 177, 225);
-            btnComanda.NormalTextColor = Color.White;
-            btnComanda.PressBorderColor = Color.FromArgb(35, 147, 195);
-            btnComanda.PressColor = Color.FromArgb(35, 147, 195);
-            btnComanda.PressTextColor = Color.White;
-            btnComanda.Size = new Size(180, 141);
-            btnComanda.Style = ReaLTaiizor.Enum.Metro.Style.Light;
-            btnComanda.StyleManager = null;
-            btnComanda.TabIndex = 1;
-            btnComanda.Text = "Comanda";
-            btnComanda.ThemeAuthor = "Taiizor";
-            btnComanda.ThemeName = "MetroLight";
+            btnUsuarios.DisabledBackColor = Color.FromArgb(120, 65, 177, 225);
+            btnUsuarios.DisabledBorderColor = Color.FromArgb(120, 65, 177, 225);
+            btnUsuarios.DisabledForeColor = Color.Gray;
+            btnUsuarios.Font = new Font("Microsoft Sans Serif", 10F);
+            btnUsuarios.HoverBorderColor = Color.FromArgb(95, 207, 255);
+            btnUsuarios.HoverColor = Color.FromArgb(95, 207, 255);
+            btnUsuarios.HoverTextColor = Color.White;
+            btnUsuarios.IsDerivedStyle = true;
+            btnUsuarios.Location = new Point(607, 152);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.NormalBorderColor = Color.FromArgb(65, 177, 225);
+            btnUsuarios.NormalColor = Color.FromArgb(65, 177, 225);
+            btnUsuarios.NormalTextColor = Color.White;
+            btnUsuarios.PressBorderColor = Color.FromArgb(35, 147, 195);
+            btnUsuarios.PressColor = Color.FromArgb(35, 147, 195);
+            btnUsuarios.PressTextColor = Color.White;
+            btnUsuarios.Size = new Size(180, 141);
+            btnUsuarios.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            btnUsuarios.StyleManager = null;
+            btnUsuarios.TabIndex = 3;
+            btnUsuarios.Text = "Usuarios";
+            btnUsuarios.ThemeAuthor = "Taiizor";
+            btnUsuarios.ThemeName = "MetroLight";
+            btnUsuarios.Click += btnUsuarios_Click;
             // 
             // btnPedidoCozinha
             // 
@@ -125,33 +102,61 @@
             btnPedidoCozinha.Text = "Pedido Cozinha";
             btnPedidoCozinha.ThemeAuthor = "Taiizor";
             btnPedidoCozinha.ThemeName = "MetroLight";
+            btnPedidoCozinha.Click += btnPedidoCozinha_Click;
             // 
-            // btnUsuario
+            // btnComanda
             // 
-            btnUsuario.DisabledBackColor = Color.FromArgb(120, 65, 177, 225);
-            btnUsuario.DisabledBorderColor = Color.FromArgb(120, 65, 177, 225);
-            btnUsuario.DisabledForeColor = Color.Gray;
-            btnUsuario.Font = new Font("Microsoft Sans Serif", 10F);
-            btnUsuario.HoverBorderColor = Color.FromArgb(95, 207, 255);
-            btnUsuario.HoverColor = Color.FromArgb(95, 207, 255);
-            btnUsuario.HoverTextColor = Color.White;
-            btnUsuario.IsDerivedStyle = true;
-            btnUsuario.Location = new Point(607, 152);
-            btnUsuario.Name = "btnUsuario";
-            btnUsuario.NormalBorderColor = Color.FromArgb(65, 177, 225);
-            btnUsuario.NormalColor = Color.FromArgb(65, 177, 225);
-            btnUsuario.NormalTextColor = Color.White;
-            btnUsuario.PressBorderColor = Color.FromArgb(35, 147, 195);
-            btnUsuario.PressColor = Color.FromArgb(35, 147, 195);
-            btnUsuario.PressTextColor = Color.White;
-            btnUsuario.Size = new Size(180, 141);
-            btnUsuario.Style = ReaLTaiizor.Enum.Metro.Style.Light;
-            btnUsuario.StyleManager = null;
-            btnUsuario.TabIndex = 3;
-            btnUsuario.Text = "Usuarios";
-            btnUsuario.ThemeAuthor = "Taiizor";
-            btnUsuario.ThemeName = "MetroLight";
-            btnUsuario.Click += metroButton4_Click;
+            btnComanda.DisabledBackColor = Color.FromArgb(120, 65, 177, 225);
+            btnComanda.DisabledBorderColor = Color.FromArgb(120, 65, 177, 225);
+            btnComanda.DisabledForeColor = Color.Gray;
+            btnComanda.Font = new Font("Microsoft Sans Serif", 10F);
+            btnComanda.HoverBorderColor = Color.FromArgb(95, 207, 255);
+            btnComanda.HoverColor = Color.FromArgb(95, 207, 255);
+            btnComanda.HoverTextColor = Color.White;
+            btnComanda.IsDerivedStyle = true;
+            btnComanda.Location = new Point(205, 152);
+            btnComanda.Name = "btnComanda";
+            btnComanda.NormalBorderColor = Color.FromArgb(65, 177, 225);
+            btnComanda.NormalColor = Color.FromArgb(65, 177, 225);
+            btnComanda.NormalTextColor = Color.White;
+            btnComanda.PressBorderColor = Color.FromArgb(35, 147, 195);
+            btnComanda.PressColor = Color.FromArgb(35, 147, 195);
+            btnComanda.PressTextColor = Color.White;
+            btnComanda.Size = new Size(180, 141);
+            btnComanda.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            btnComanda.StyleManager = null;
+            btnComanda.TabIndex = 1;
+            btnComanda.Text = "Comanda";
+            btnComanda.ThemeAuthor = "Taiizor";
+            btnComanda.ThemeName = "MetroLight";
+            btnComanda.Click += btnComanda_Click;
+            // 
+            // btnCardapio
+            // 
+            btnCardapio.DisabledBackColor = Color.FromArgb(120, 65, 177, 225);
+            btnCardapio.DisabledBorderColor = Color.FromArgb(120, 65, 177, 225);
+            btnCardapio.DisabledForeColor = Color.Gray;
+            btnCardapio.Font = new Font("Microsoft Sans Serif", 10F);
+            btnCardapio.HoverBorderColor = Color.FromArgb(95, 207, 255);
+            btnCardapio.HoverColor = Color.FromArgb(95, 207, 255);
+            btnCardapio.HoverTextColor = Color.White;
+            btnCardapio.IsDerivedStyle = true;
+            btnCardapio.Location = new Point(6, 152);
+            btnCardapio.Name = "btnCardapio";
+            btnCardapio.NormalBorderColor = Color.FromArgb(65, 177, 225);
+            btnCardapio.NormalColor = Color.FromArgb(65, 177, 225);
+            btnCardapio.NormalTextColor = Color.White;
+            btnCardapio.PressBorderColor = Color.FromArgb(35, 147, 195);
+            btnCardapio.PressColor = Color.FromArgb(35, 147, 195);
+            btnCardapio.PressTextColor = Color.White;
+            btnCardapio.Size = new Size(180, 141);
+            btnCardapio.Style = ReaLTaiizor.Enum.Metro.Style.Light;
+            btnCardapio.StyleManager = null;
+            btnCardapio.TabIndex = 0;
+            btnCardapio.Text = "Cardapio";
+            btnCardapio.ThemeAuthor = "Taiizor";
+            btnCardapio.ThemeName = "MetroLight";
+            btnCardapio.Click += btnCardapio_Click;
             // 
             // FrmPrincipal
             // 
@@ -159,8 +164,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(887, 450);
             Controls.Add(gpxPrincipal);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPrincipal";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "formTheme1";
+            TransparencyKey = Color.Fuchsia;
             gpxPrincipal.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -168,7 +176,7 @@
         #endregion
 
         private GroupBox gpxPrincipal;
-        private ReaLTaiizor.Controls.MetroButton btnUsuario;
+        private ReaLTaiizor.Controls.MetroButton btnUsuarios;
         private ReaLTaiizor.Controls.MetroButton btnPedidoCozinha;
         private ReaLTaiizor.Controls.MetroButton btnComanda;
         private ReaLTaiizor.Controls.MetroButton btnCardapio;
