@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using System;
+
 namespace Comandas
 {
     public partial class FrmPrincipal : Form
@@ -5,7 +8,24 @@ namespace Comandas
         public FrmPrincipal()
         {
             InitializeComponent();
+            CriarBancoDeDados();
         }
+        //método (visibilidade=private, retorno=
+        private void CriarBancoDeDados()
+        {
+
+            //criar uma variavel do tipoAppDbContext
+            //usar a variavel e acessar o contexto
+            //excecutar a migração == F5
+            using (var banco = new AppDbContext())
+            {
+                //executa a migração(CREATE TABLE Usuarios
+                banco.Database.Migrate();
+            }
+
+
+        }
+
 
         // evento de click
         private void metroButton4_Click(object sender, EventArgs e)

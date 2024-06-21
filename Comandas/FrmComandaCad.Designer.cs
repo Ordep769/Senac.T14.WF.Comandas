@@ -28,55 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cyberButton1 = new ReaLTaiizor.Controls.CyberButton();
+            Voltar = new ReaLTaiizor.Controls.CyberButton();
             SuspendLayout();
             // 
-            // cyberButton1
+            // Voltar
             // 
-            cyberButton1.Alpha = 20;
-            cyberButton1.BackColor = Color.Transparent;
-            cyberButton1.Background = true;
-            cyberButton1.Background_WidthPen = 4F;
-            cyberButton1.BackgroundPen = true;
-            cyberButton1.ColorBackground = Color.FromArgb(37, 52, 68);
-            cyberButton1.ColorBackground_1 = Color.FromArgb(37, 52, 68);
-            cyberButton1.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            cyberButton1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberButton1.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberButton1.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberButton1.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberButton1.CyberButtonStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberButton1.Effect_1 = true;
-            cyberButton1.Effect_1_ColorBackground = Color.FromArgb(29, 200, 238);
-            cyberButton1.Effect_1_Transparency = 25;
-            cyberButton1.Effect_2 = true;
-            cyberButton1.Effect_2_ColorBackground = Color.White;
-            cyberButton1.Effect_2_Transparency = 20;
-            cyberButton1.Font = new Font("Arial", 11F);
-            cyberButton1.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberButton1.Lighting = false;
-            cyberButton1.LinearGradient_Background = false;
-            cyberButton1.LinearGradientPen = false;
-            cyberButton1.Location = new Point(12, 552);
-            cyberButton1.Name = "cyberButton1";
-            cyberButton1.PenWidth = 15;
-            cyberButton1.Rounding = true;
-            cyberButton1.RoundingInt = 70;
-            cyberButton1.Size = new Size(195, 75);
-            cyberButton1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberButton1.TabIndex = 0;
-            cyberButton1.Tag = "Cyber";
-            cyberButton1.TextButton = "CyberButton";
-            cyberButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberButton1.Timer_Effect_1 = 5;
-            cyberButton1.Timer_RGB = 300;
+            Voltar.Alpha = 20;
+            Voltar.BackColor = Color.Transparent;
+            Voltar.Background = true;
+            Voltar.Background_WidthPen = 4F;
+            Voltar.BackgroundPen = true;
+            Voltar.ColorBackground = Color.FromArgb(37, 52, 68);
+            Voltar.ColorBackground_1 = Color.FromArgb(37, 52, 68);
+            Voltar.ColorBackground_2 = Color.FromArgb(41, 63, 86);
+            Voltar.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            Voltar.ColorLighting = Color.FromArgb(29, 200, 238);
+            Voltar.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            Voltar.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            Voltar.CyberButtonStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            Voltar.Effect_1 = true;
+            Voltar.Effect_1_ColorBackground = Color.FromArgb(29, 200, 238);
+            Voltar.Effect_1_Transparency = 25;
+            Voltar.Effect_2 = true;
+            Voltar.Effect_2_ColorBackground = Color.White;
+            Voltar.Effect_2_Transparency = 20;
+            Voltar.Font = new Font("Arial", 11F);
+            Voltar.ForeColor = Color.FromArgb(245, 245, 245);
+            Voltar.Lighting = false;
+            Voltar.LinearGradient_Background = false;
+            Voltar.LinearGradientPen = false;
+            Voltar.Location = new Point(12, 552);
+            Voltar.Name = "Voltar";
+            Voltar.PenWidth = 15;
+            Voltar.Rounding = true;
+            Voltar.RoundingInt = 70;
+            Voltar.Size = new Size(195, 75);
+            Voltar.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            Voltar.TabIndex = 0;
+            Voltar.Tag = "Cyber";
+            Voltar.TextButton = "Voltar";
+            Voltar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            Voltar.Timer_Effect_1 = 5;
+            Voltar.Timer_RGB = 300;
+            Voltar.Click += Voltar_Click;
             // 
             // FrmComandaCad
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 639);
-            Controls.Add(cyberButton1);
+            Controls.Add(Voltar);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(261, 61);
             Name = "FrmComandaCad";
@@ -88,6 +89,6 @@
 
         #endregion
 
-        private ReaLTaiizor.Controls.CyberButton cyberButton1;
+        private ReaLTaiizor.Controls.CyberButton Voltar;
     }
 }
