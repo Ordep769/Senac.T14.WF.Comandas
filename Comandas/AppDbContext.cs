@@ -5,6 +5,8 @@ namespace Comandas
     //Clase que representa o banco de dados
     public class AppDbContext : DbContext
     {
+        internal object saveChange;
+
         //propriedade que representa a tabela Usuarios
         public DbSet<Usuario> Usuarios { get; set; }
 

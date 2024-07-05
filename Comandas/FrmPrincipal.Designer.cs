@@ -185,7 +185,7 @@
             btnSair.Lighting = false;
             btnSair.LinearGradient_Background = false;
             btnSair.LinearGradientPen = false;
-            btnSair.Location = new Point(12, 586);
+            btnSair.Location = new Point(12, 560);
             btnSair.Name = "btnSair";
             btnSair.PenWidth = 15;
             btnSair.Rounding = true;
