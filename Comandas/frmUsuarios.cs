@@ -53,9 +53,9 @@ namespace Comandas
         private void LimparCampos()
         {
             txtId.TextButton = string.Empty;
-            txtNome.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtSenha.Text = string.Empty;
+            txtNome.TextButton = string.Empty;
+            txtEmail.TextButton = string.Empty;
+            txtSenha.TextButton = string.Empty;
         }
 
         private void AtualizarUsuario()
@@ -67,9 +67,9 @@ namespace Comandas
                     .Where(e => e.Id == int.Parse(txtId.TextButton))
                     .FirstOrDefault();
 
-                usuario.Nome = txtId.TextButton;
-                usuario.Email = txtNome.TextButton;
-                usuario.Senha = txtEmail.TextButton;
+                usuario.Nome = txtNome.TextButton;
+                usuario.Email = txtEmail.TextButton;
+                usuario.Senha = txtSenha.TextButton;
                 banco.SaveChanges();
             }
         }
@@ -118,6 +118,47 @@ namespace Comandas
         {
             //indica que esta editando o usuario
             ehNovo = false;
+            Habilitarcampos(); 
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            CarregarUsuarios();
+        }
+
+        private void CarregarUsuarios()
+        {
+            // Conectar no Banco
+            using (var banco = new AppDbContext())
+            {
+                // realizar consulta na tabela usuarios
+                var usuarios = banco.Usuarios.ToList();
+                // Popular os dados do grid(dataGridView)
+                dgvUsuarios.DataSource = usuarios;
+            }
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //verifica se o indice da linha é maior ou igual a zero
+            // saber se exixte uma linha selecionada
+            if(e.RowIndex >= 0)
+            {
+                // menssagem "Linha selecionada 1"
+                //MessageBox.Show("Linha selecionada " + (e.RowIndex + 1));
+
+                //obter dados da linha
+                var id = dgvUsuarios.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+                var nome = dgvUsuarios.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
+                var email = dgvUsuarios.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+                var senha = dgvUsuarios.Rows[e.RowIndex].Cells["Senha"].Value.ToString();
+
+                txtId.TextButton = id;
+                txtNome.TextButton = nome;
+                txtEmail.TextButton = email;
+                txtSenha.TextButton = senha;
+
+            }
         }
     }
 }
