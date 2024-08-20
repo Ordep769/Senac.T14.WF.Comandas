@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Comandas
 {
-    public partial class FrmCardapioCad : Form
+    public partial class frmCardapioCad : Form
     {
-        public FrmCardapioCad()
+        public frmCardapioCad()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

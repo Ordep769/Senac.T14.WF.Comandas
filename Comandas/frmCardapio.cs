@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Comandas
 {
-    public partial class frmCardapio : Form
+    public partial class FrmCardapio : Form
     {
-        public frmCardapio()
+        public FrmCardapio()
         {
             InitializeComponent();
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            new FrmCardapio().ShowDialog();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            new frmCardapioCad().ShowDialog();
         }
     }
 }
