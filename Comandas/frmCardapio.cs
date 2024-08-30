@@ -11,15 +11,17 @@ using System.Windows.Forms;
 namespace Comandas
 {
     public partial class FrmCardapio : Form
-    {
+    {   
         public FrmCardapio()
         {
+            
             InitializeComponent();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            new FrmCardapio().ShowDialog();
+            var ehNovo = true;
+            new frmCardapioCad(ehNovo).ShowDialog();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -34,7 +36,8 @@ namespace Comandas
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            new frmCardapioCad().ShowDialog();
+            var ehNovo = false;
+            new frmCardapioCad(ehNovo).ShowDialog();
         }
     }
 }
