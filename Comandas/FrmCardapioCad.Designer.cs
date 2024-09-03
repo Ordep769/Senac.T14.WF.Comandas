@@ -30,6 +30,7 @@
         {
             btnSalvar = new ReaLTaiizor.Controls.CyberButton();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
+            TxtId = new ReaLTaiizor.Controls.CyberTextBox();
             Preço = new ReaLTaiizor.Controls.ThunderLabel();
             chkPossuiPreparo = new ReaLTaiizor.Controls.CyberCheckBox();
             Descrição = new ReaLTaiizor.Controls.ThunderLabel();
@@ -96,6 +97,7 @@
             cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
             cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
             cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.Controls.Add(TxtId);
             cyberGroupBox1.Controls.Add(Preço);
             cyberGroupBox1.Controls.Add(chkPossuiPreparo);
             cyberGroupBox1.Controls.Add(Descrição);
@@ -120,6 +122,36 @@
             cyberGroupBox1.Tag = "Cyber";
             cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox1.Timer_RGB = 300;
+            // 
+            // TxtId
+            // 
+            TxtId.Alpha = 20;
+            TxtId.BackColor = Color.Transparent;
+            TxtId.Background_WidthPen = 3F;
+            TxtId.BackgroundPen = true;
+            TxtId.ColorBackground = Color.MidnightBlue;
+            TxtId.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            TxtId.ColorLighting = Color.FromArgb(29, 200, 238);
+            TxtId.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            TxtId.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            TxtId.CyberTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            TxtId.Font = new Font("Arial", 15F);
+            TxtId.ForeColor = Color.White;
+            TxtId.Lighting = false;
+            TxtId.LinearGradientPen = false;
+            TxtId.Location = new Point(85, 68);
+            TxtId.Name = "TxtId";
+            TxtId.PenWidth = 15;
+            TxtId.RGB = false;
+            TxtId.Rounding = true;
+            TxtId.RoundingInt = 60;
+            TxtId.Size = new Size(123, 60);
+            TxtId.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            TxtId.TabIndex = 11;
+            TxtId.Tag = "Cyber";
+            TxtId.TextButton = "1";
+            TxtId.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            TxtId.Timer_RGB = 300;
             // 
             // Preço
             // 
@@ -205,13 +237,13 @@
             TxtPreço.ForeColor = Color.White;
             TxtPreço.Lighting = false;
             TxtPreço.LinearGradientPen = false;
-            TxtPreço.Location = new Point(103, 328);
+            TxtPreço.Location = new Point(85, 328);
             TxtPreço.Name = "TxtPreço";
             TxtPreço.PenWidth = 15;
             TxtPreço.RGB = false;
             TxtPreço.Rounding = true;
             TxtPreço.RoundingInt = 60;
-            TxtPreço.Size = new Size(378, 60);
+            TxtPreço.Size = new Size(396, 60);
             TxtPreço.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             TxtPreço.TabIndex = 2;
             TxtPreço.Tag = "Cyber";
@@ -235,13 +267,13 @@
             TxtDescrição.ForeColor = Color.White;
             TxtDescrição.Lighting = false;
             TxtDescrição.LinearGradientPen = false;
-            TxtDescrição.Location = new Point(103, 198);
+            TxtDescrição.Location = new Point(85, 198);
             TxtDescrição.Name = "TxtDescrição";
             TxtDescrição.PenWidth = 15;
             TxtDescrição.RGB = false;
             TxtDescrição.Rounding = true;
             TxtDescrição.RoundingInt = 60;
-            TxtDescrição.Size = new Size(907, 60);
+            TxtDescrição.Size = new Size(925, 60);
             TxtDescrição.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             TxtDescrição.TabIndex = 1;
             TxtDescrição.Tag = "Cyber";
@@ -265,13 +297,13 @@
             TxtTitulo.ForeColor = Color.White;
             TxtTitulo.Lighting = false;
             TxtTitulo.LinearGradientPen = false;
-            TxtTitulo.Location = new Point(103, 68);
+            TxtTitulo.Location = new Point(214, 68);
             TxtTitulo.Name = "TxtTitulo";
             TxtTitulo.PenWidth = 15;
             TxtTitulo.RGB = false;
             TxtTitulo.Rounding = true;
             TxtTitulo.RoundingInt = 60;
-            TxtTitulo.Size = new Size(907, 60);
+            TxtTitulo.Size = new Size(796, 60);
             TxtTitulo.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             TxtTitulo.TabIndex = 0;
             TxtTitulo.Tag = "Cyber";
@@ -348,5 +380,6 @@
         private ReaLTaiizor.Controls.ThunderLabel Descrição;
         private ReaLTaiizor.Controls.ThunderLabel Titulo;
         private ReaLTaiizor.Controls.CyberCheckBox chkPossuiPreparo;
+        private ReaLTaiizor.Controls.CyberTextBox TxtId;
     }
 }

@@ -240,7 +240,7 @@
             dgvCardapio.Size = new Size(1157, 394);
             dgvCardapio.TabIndex = 5;
             // 
-            // FrmCardapioCad
+            // FrmCardapio
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -252,7 +252,7 @@
             Controls.Add(txtPesquisa);
             Controls.Add(btnVoltar);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmCardapioCad";
+            Name = "FrmCardapio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CardapioCad";
             ((System.ComponentModel.ISupportInitialize)dgvCardapio).EndInit();

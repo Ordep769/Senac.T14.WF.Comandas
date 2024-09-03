@@ -42,7 +42,19 @@ namespace Comandas
 
         private void AtualizarCardapio()
         {
-            
+            // Conecta no banco de dados
+            using ( var banco = new AppDbContext())
+            {
+                var cardapio = banco.Cardapio.FirstOrDefault(c => c.Id == int.Parse(TxtId.TextButton));
+
+
+                cardapio.Titulo = TxtTitulo.TextButton;
+                cardapio.Descrição = TxtDescrição.TextButton;
+                cardapio.Preço = decimal.Parse(TxtPreço.TextButton);
+                cardapio.PossuiPreparo = chkPossuiPreparo.Checked;
+                banco.SaveChanges();
+
+            }
         }
 
         private void adicionarCardapio()

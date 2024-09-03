@@ -16,6 +16,16 @@ namespace Comandas
         {
             
             InitializeComponent();
+            ListarCardapio();
+        }
+
+        private void ListarCardapio()
+        {
+            using(var banco = new AppDbContext())
+            {
+                var cardapio = banco.Cardapio.ToList();
+                dgvCardapio.DataSource = cardapio;
+            }
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
