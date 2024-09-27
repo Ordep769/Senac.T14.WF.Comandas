@@ -47,7 +47,7 @@
             btnVoltar.ColorBackground = Color.Black;
             btnVoltar.ColorBackground_1 = Color.FromArgb(37, 52, 68);
             btnVoltar.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            btnVoltar.ColorBackground_Pen = Color.Black;
+            btnVoltar.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
             btnVoltar.ColorLighting = Color.FromArgb(29, 200, 238);
             btnVoltar.ColorPen_1 = Color.FromArgb(37, 52, 68);
             btnVoltar.ColorPen_2 = Color.FromArgb(41, 63, 86);
@@ -118,7 +118,7 @@
             btnEditar.ColorBackground = Color.Lime;
             btnEditar.ColorBackground_1 = Color.FromArgb(37, 52, 68);
             btnEditar.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            btnEditar.ColorBackground_Pen = Color.Black;
+            btnEditar.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
             btnEditar.ColorLighting = Color.FromArgb(0, 192, 0);
             btnEditar.ColorPen_1 = Color.FromArgb(37, 52, 68);
             btnEditar.ColorPen_2 = Color.FromArgb(41, 63, 86);
@@ -129,6 +129,7 @@
             btnEditar.Effect_2 = true;
             btnEditar.Effect_2_ColorBackground = Color.Black;
             btnEditar.Effect_2_Transparency = 20;
+            btnEditar.Enabled = false;
             btnEditar.Font = new Font("Arial", 11F);
             btnEditar.ForeColor = Color.Black;
             btnEditar.Lighting = false;
@@ -159,7 +160,7 @@
             btnNovo.ColorBackground = Color.FromArgb(128, 255, 255);
             btnNovo.ColorBackground_1 = Color.FromArgb(37, 52, 68);
             btnNovo.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            btnNovo.ColorBackground_Pen = Color.Black;
+            btnNovo.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
             btnNovo.ColorLighting = Color.FromArgb(29, 200, 238);
             btnNovo.ColorPen_1 = Color.FromArgb(37, 52, 68);
             btnNovo.ColorPen_2 = Color.FromArgb(41, 63, 86);
@@ -200,7 +201,7 @@
             btnExcluir.ColorBackground = Color.Red;
             btnExcluir.ColorBackground_1 = Color.FromArgb(37, 52, 68);
             btnExcluir.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            btnExcluir.ColorBackground_Pen = Color.Black;
+            btnExcluir.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
             btnExcluir.ColorLighting = Color.FromArgb(29, 200, 238);
             btnExcluir.ColorPen_1 = Color.FromArgb(37, 52, 68);
             btnExcluir.ColorPen_2 = Color.FromArgb(41, 63, 86);
@@ -211,6 +212,7 @@
             btnExcluir.Effect_2 = true;
             btnExcluir.Effect_2_ColorBackground = Color.White;
             btnExcluir.Effect_2_Transparency = 20;
+            btnExcluir.Enabled = false;
             btnExcluir.Font = new Font("Arial", 11F);
             btnExcluir.ForeColor = Color.Black;
             btnExcluir.Lighting = false;
@@ -239,6 +241,7 @@
             dgvCardapio.RowHeadersWidth = 62;
             dgvCardapio.Size = new Size(1157, 394);
             dgvCardapio.TabIndex = 5;
+            dgvCardapio.CellClick += dgvCardapio_CellClick;
             // 
             // FrmCardapio
             // 

@@ -14,10 +14,38 @@ namespace Comandas
     {   //variavel que indica que esta criando um novo cardapio
         // bool =  true, false
         bool ehNovo = false;
+
+        public int ID { get; }
+        public string? TITULO { get; }
+        public string? DESCRICAO { get; }
+        public decimal PRECO { get; }
+        public bool POSSUIPREPARO { get; }
+
         public frmCardapioCad(bool acao)
         {
             ehNovo = acao;
             InitializeComponent();
+        }
+
+        public frmCardapioCad(bool acao, int iD, string? tITULO, string? dESCRICAO, decimal pRECO, bool pOSSUIPREPARO) : this(acao)
+        {
+            ehNovo = acao;
+            InitializeComponent();
+            ID = iD;
+            TITULO = tITULO;
+            DESCRICAO = dESCRICAO;
+            PRECO = pRECO;
+            POSSUIPREPARO = pOSSUIPREPARO;
+            popularCampos();
+        }
+
+        private void popularCampos()
+        {
+            TxtId.TextButton = ID.ToString();
+            TxtTitulo.TextButton = TITULO;
+            TxtDescrição.TextButton = DESCRICAO;
+            TxtPreço.TextButton = PRECO.ToString();
+            chkPossuiPreparo.Checked = POSSUIPREPARO;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -49,8 +77,8 @@ namespace Comandas
 
 
                 cardapio.Titulo = TxtTitulo.TextButton;
-                cardapio.Descrição = TxtDescrição.TextButton;
-                cardapio.Preço = decimal.Parse(TxtPreço.TextButton);
+                cardapio.Descricao = TxtDescrição.TextButton;
+                cardapio.Preco = decimal.Parse(TxtPreço.TextButton);
                 cardapio.PossuiPreparo = chkPossuiPreparo.Checked;
                 banco.SaveChanges();
 
@@ -66,8 +94,8 @@ namespace Comandas
                 var novoCardapio = new Cardapio()
                 {
                     Titulo = TxtTitulo.TextButton,
-                    Descrição = TxtDescrição.TextButton,
-                    Preço = Decimal.Parse(TxtPreço.TextButton),
+                    Descricao = TxtDescrição.TextButton,
+                    Preco = Decimal.Parse(TxtPreço.TextButton),
                     PossuiPreparo = chkPossuiPreparo.Checked,
                 };
                 banco.Cardapio.Add(novoCardapio);
