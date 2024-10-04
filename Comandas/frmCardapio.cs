@@ -12,6 +12,7 @@ namespace Comandas
 {
     public partial class FrmCardapio : Form
     {
+        // Variaveis locais
         public int ID { get; private set; }
         public string? TITULO { get; private set; }
         public string? DESCRICAO { get; private set; }
@@ -25,7 +26,7 @@ namespace Comandas
             ListarCardapio();
         }
 
-        private void ListarCardapio()
+        public void ListarCardapio()
         {
             using (var banco = new AppDbContext())
             {
@@ -36,8 +37,9 @@ namespace Comandas
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            // Criei uma variavel booleana para indicar o tipo de cad
             var ehNovo = true;
-            new frmCardapioCad(ehNovo).ShowDialog();
+            new frmCardapioCad(ehNovo, this).ShowDialog();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -47,13 +49,45 @@ namespace Comandas
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            // Exibe uma mesagem de confirmação para o usuário
+            var result = MessageBox.Show($"Confirma a exclusão do item {TITULO} ?", "Excluir cardápio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // Se o usuário clicou em não
+            if (result == DialogResult.No) 
+            {
+                return;
+            }
 
+            // Chamar o método excluir
+            if(ExcluirCardapio(ID))
+            {   //Atualiza a tabela
+                ListarCardapio();
+                // Exibe a mensagem de sucesso
+                MessageBox.Show($"Cardápio '{TITULO}' excluido com sucesso!");
+                // Desabilita o botão de excluir
+                btnExcluir.Enabled = false;
+            }
+        }
+
+        private bool ExcluirCardapio(int iD)
+        {
+            // Conectar no banco
+            using(var banco = new AppDbContext()) 
+            {
+                // Buscar o cardápio através do id
+                // SELECT * FROM Cardapios WHERE id = @iD
+                var card = banco.Cardapio.First(c => c.Id == iD);
+                // AVisar o banco da exclusão
+                banco.Cardapio.Remove(card);
+                // Confirmar para o banco a ação
+                banco.SaveChanges();
+            }
+            return true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             var ehNovo = false;
-            new frmCardapioCad(ehNovo, ID, TITULO, DESCRICAO, PRECO, POSSUIPREPARO).ShowDialog();
+            new frmCardapioCad(ehNovo, ID, TITULO, DESCRICAO, PRECO, POSSUIPREPARO, this).ShowDialog();
         }
 
         private void dgvCardapio_CellClick(object sender, DataGridViewCellEventArgs e)

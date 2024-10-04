@@ -14,6 +14,7 @@ namespace Comandas
     {   //variavel que indica que esta criando um novo cardapio
         // bool =  true, false
         bool ehNovo = false;
+        private FrmCardapio _frmCardapio;
 
         public int ID { get; }
         public string? TITULO { get; }
@@ -21,14 +22,14 @@ namespace Comandas
         public decimal PRECO { get; }
         public bool POSSUIPREPARO { get; }
 
-        public frmCardapioCad(bool acao)
+        public frmCardapioCad(bool acao, FrmCardapio frmCardapio)
         {
             ehNovo = acao;
+            _frmCardapio = frmCardapio;
             InitializeComponent();
         }
 
-        public frmCardapioCad(bool acao, int iD, string? tITULO, string? dESCRICAO, decimal pRECO, bool pOSSUIPREPARO) : this(acao)
-        {
+        public frmCardapioCad(bool acao, int iD, string? tITULO, string? dESCRICAO, decimal pRECO, bool pOSSUIPREPARO, FrmCardapio frmCardapio) : this(acao, frmCardapio)        {
             ehNovo = acao;
             InitializeComponent();
             ID = iD;
@@ -64,10 +65,11 @@ namespace Comandas
             else
             {   // Executa o método que realiza o UPDATE na tabela
                 AtualizarCardapio();
-            } // Fecha a tela atual
+            }
+            _frmCardapio.ListarCardapio();
+            //Fecha a tela atual
             Close();
         }
-
         private void AtualizarCardapio()
         {
             // Conecta no banco de dados
